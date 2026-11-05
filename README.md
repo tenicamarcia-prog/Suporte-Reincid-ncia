@@ -54,3 +54,4 @@ A aplicação conta com:
 - **Instrutora Oficial:** Márcia Cardoso (Trainee T&D & Técnica Especialista)
 - **Coordenador Solicitante:** Fernando Mateus (Coordenador de Customer Success)
 - **Área:** Treinamento & Desenvolvimento / Suporte Técnico Ateky Internet
+

@@ -61,3 +61,4 @@ Capacitar a equipe (N1, N2 e N3) a aplicar a **Visão 360º no atendimento**:
 > - **Transformação de Detrator para Brand Lover.**
 > - **Checklist de Excelência do Atendimento 360º.**
 > A equipe deve sair capacitada a usar o histórico a favor do atendimento, reduzindo reincidência e elevando a nota FALE."
+

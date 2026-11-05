@@ -80,3 +80,4 @@ Este documento atesta formalmente a capacitação dos colaboradores listados par
 - **Instrutora Responsável:** Márcia Cardoso (Trainee T&D)
 - **Coordenador da Área:** Fernando Mateus (Coordenador CS)
 - **Área de Recursos Humanos / T&D:** Ateky Internet
+
