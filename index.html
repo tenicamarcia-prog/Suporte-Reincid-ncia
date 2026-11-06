@@ -79,19 +79,24 @@ h2{background:linear-gradient(90deg,var(--navy),var(--red));-webkit-background-c
 footer{text-align:center;color:var(--mut);font-size:.82rem;padding:20px}
 @media(max-width:600px){.kpis{grid-template-columns:1fr}}
 
-.ev{max-width:900px;margin:10px auto 34px;padding:0 18px}
-.ev-in{display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;padding:38px 40px;border-radius:22px;color:#fff;background:radial-gradient(circle at 10% 0%,rgba(74,144,226,.28),transparent 45%),linear-gradient(135deg,#0a1e3f 0%,#0b2347 60%,#3a0d16 100%);border:1px solid rgba(255,255,255,.1);box-shadow:0 22px 44px -18px rgba(10,30,63,.55)}
-.ev-t{min-width:0}
-.ev h2.ev-h{font-size:clamp(1.6rem,4vw,2.1rem);line-height:1.15;font-weight:800;margin:0 0 12px;background:none;-webkit-text-fill-color:#fff;color:#fff;display:block}
-.ev-h span{background:linear-gradient(90deg,#4a90e2,#ff5b6b);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
-.ev-t>p{color:#cbd5e1;font-size:.98rem;max-width:520px}
-.ev-s{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-direction:column;gap:12px}
-.ev-s li{display:flex;align-items:center;gap:12px;color:#dbe3ee;font-size:.92rem}
-.ev-s i{flex:0 0 auto;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-weight:700;font-size:.78rem;background:#d62839;color:#fff;box-shadow:0 0 0 3px rgba(214,40,57,.25)}
-.ev-q{background:#fff;border-radius:16px;padding:14px 14px 12px;display:flex;align-items:center;gap:10px;justify-content:space-between;box-shadow:0 14px 30px -12px rgba(0,0,0,.6)}
-.ev-q .av{width:64px;height:64px;border-radius:50%;object-fit:cover;margin-left:10px}
-.ev-q small{display:block;margin-top:10px;color:#14213d;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.7rem;font-weight:700;letter-spacing:.14em}
-@media(max-width:700px){.ev-in{grid-template-columns:1fr;padding:28px 22px;gap:24px;justify-items:stretch}.ev-q{justify-self:center}}
+.fx{display:none!important}
+
+.ev-wrap{max-width:900px;margin:40px auto;padding:0 18px}
+.ev-box{display:flex;align-items:center;gap:32px;background:#f4f7fb;border:1px solid #dbe3ee;border-radius:20px;padding:32px 36px;box-shadow:0 8px 24px -10px rgba(10,30,63,.18)}
+.ev-qr{flex:0 0 auto;text-align:center}
+.ev-qr img{width:150px;height:150px;border-radius:14px;display:block;border:3px solid #dbe3ee}
+.ev-label{font-size:.75rem;color:#5b6b82;margin-top:8px;font-weight:600}
+.ev-text{flex:1;min-width:0}
+.ev-h{font-size:1.4rem;font-weight:800;margin:0 0 10px;display:block;background:none;-webkit-text-fill-color:var(--txt);color:var(--txt)}
+.ev-h span{background:linear-gradient(90deg,#4a90e2,#d62839);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.ev-text p{color:#334155;font-size:.95rem;margin-bottom:10px}
+.ev-quote{font-style:italic;color:#16794a!important;font-weight:600}
+.ev-cta{display:inline-block;border:2px solid #16794a;border-radius:99px;padding:6px 16px;color:#16794a!important;font-weight:700;font-size:.85rem}
+.ev-instructor{display:flex;align-items:center;gap:12px;margin:14px 0 10px;background:#fff;border-radius:12px;padding:10px 14px;border:1px solid #dbe3ee}
+.ev-instructor strong{display:block;color:#0a1e3f;font-size:.95rem}
+.ev-instructor small{display:block;color:#5b6b82;font-size:.78rem;margin-top:2px}
+.ev-av{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:top;border:3px solid #2b6cb0;box-shadow:0 0 0 3px #fbd0d4;flex-shrink:0;background:#fff}
+@media(max-width:600px){.ev-box{flex-direction:column;padding:22px 18px;text-align:center}.ev-instructor{justify-content:center}}
 </style>
 </head>
 <body>
@@ -104,7 +109,7 @@ footer{text-align:center;color:var(--mut);font-size:.82rem;padding:20px}
 <div class="dica"><b>DICA DE OURO</b> "Para o cliente, qualquer retorno é um problema contínuo. Siga sempre o processo correto."</div>
 <div class="stp">Consultar o histórico (60 dias)</div><div class="stp">Conferir assunto e diagnóstico</div><div class="stp">Informar o colaborador anterior</div><div class="stp r">2ª reincidência vai direto ao N3</div></div>
 </div></div>
-<img class="fx" id="fx" src="assets/avatar-marcia.png" alt="">
+
 <div class="wrap">
 <div class="kpis"><div class="kpi"><b>60 dias</b><small>janela de reincidência, mesmo assunto</small></div><div class="kpi"><b>Colaborador anterior</b><small>registro obrigatório de quem finalizou</small></div><div class="kpi"><b>2ª → N3</b><small>escalonamento direto</small></div></div>
 <div class="intro"><b>Como funciona:</b> cada caso tem 6 etapas. Você lê a <b>situação</b>, é <b>provocado a pensar</b>, <b>investiga</b>, <b>constrói a solução</b>, <b>aplica em outro cenário</b> e é <b>avaliado</b>. Errar faz parte: cada resposta, certa ou errada, vem com o motivo.</div>
@@ -115,8 +120,29 @@ footer{text-align:center;color:var(--mut);font-size:.82rem;padding:20px}
 <div class="steps" id="steps"></div>
 <div id="app"></div>
 </div>
-<div class="ev-in"><div class="ev-t"><h2 class="ev-h">Avalie o <span>Treinamento</span></h2><p>Sua opinião é fundamental para aprimorar nossos processos e treinamentos operacionais. Aponte a câmera do seu smartphone para o QR Code ao lado para responder à rápida avaliação.</p><ol class="ev-s"><li><i>1</i>Abra a câmera do seu celular ou leitor de QR Code</li><li><i>2</i>Aponte para o código ao lado</li><li><i>3</i>Envie sua nota e feedback sobre o treinamento</li></ol></div><div class="ev-q"><img src="assets/qrcode-avaliacao.jpg" alt="QR Code para avaliar o treinamento"><img src="assets/avatar-user.jpg" alt="Avatar" class="av"></div>
-</div></div></section>
+
+<div class="ev-wrap">
+  <div class="ev-box">
+    <div class="ev-qr">
+      <img src="assets/avatar.png" alt="QR Code Avaliação">
+      <p class="ev-label">📷 Aponte a câmera para avaliar</p>
+    </div>
+    <div class="ev-text">
+      <h2 class="ev-h">⭐ <span>Avaliação Oficial</span> do Treinamento</h2>
+      <p>Sua opinião é indispensável para aperfeiçoar os treinamentos técnicos da <strong>Ateky Internet</strong>. Aponte a câmera do seu celular para o QR Code ao lado para registrar sua presença, nota de avaliação e sugestões pedagógicas sobre o módulo <strong>Reincidência & Processos N1/N2</strong>.</p>
+      <div class="ev-instructor">
+        <img src="assets/avatar-marcia.png" alt="Márcia Cardoso" class="ev-av">
+        <div>
+          <strong>Márcia Cardoso</strong>
+          <small>Instrutora &amp; Coordenação de Treinamento N1/N2 · Ateky Internet</small>
+        </div>
+      </div>
+      <p class="ev-quote">🌱 <em>"Se evolui ensinando, se cresce ajudando."</em></p>
+    </div>
+  </div>
+</div>
+
+</section>
 <footer>Aprenda para Ensinar · Não entregue respostas. Desenvolva raciocínio.</footer>
 <script>
 const SK={rac:'Raciocínio crítico',dia:'Diagnóstico',com:'Comunicação',dec:'Tomada de decisão'};
