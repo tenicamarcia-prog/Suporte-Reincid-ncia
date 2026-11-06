@@ -1,4 +1,4 @@
-# Treinamento: Suporte & Reincidência (Visão 360º) — Ateky Internet
+# Treinamento: Suporte & Reincidência — Ateky Internet
 
 Material de capacitação técnica, operacional e comportamental desenvolvido para as equipes de **Customer Success (Suporte N1, N2 e N3)** da **Ateky Internet**, com foco na redução da taxa de reincidência e elevação do indicador de qualidade **FALE** (meta: 7.0 ➔ 7.5+).
 
