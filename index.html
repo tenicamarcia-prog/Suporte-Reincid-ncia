@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Visão 360º — Reincidência | Aprenda para Ensinar</title>
+<style>
+:root{--navy:#0a1e3f;--navy2:#0d2b5e;--red:#d62839;--bg:#fff;--soft:#f4f7fb;--line:#dbe3ee;--txt:#14213d;--mut:#5b6b82;--ok:#16794a;--okbg:#eaf7f0;--no:#b3202f;--nobg:#fdeceb}
+*{box-sizing:border-box;margin:0}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px 60px}
+.hero{background:linear-gradient(135deg,var(--navy),var(--navy2) 70%,var(--red) 160%);color:#fff;padding:34px 18px 28px}
+.hero .in{max-width:900px;margin:0 auto}
+.tag{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+h1{font-size:clamp(1.6rem,4vw,2.3rem);line-height:1.2;margin:8px 0}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px;font-weight:700;font-size:.9rem}
+.flow span{background:rgba(255,255,255,.14);padding:5px 12px;border-radius:99px}
+.flow i{font-style:normal;color:#ff9aa5}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:-18px 0 22px}
+.kpi{background:#fff;border:1px solid var(--line);border-top:4px solid var(--red);border-radius:12px;padding:12px;text-align:center;box-shadow:0 6px 16px -8px rgba(10,30,63,.25)}
+.kpi b{display:block;font-size:1.5rem;color:var(--navy)}.kpi small{color:var(--mut)}
+.intro{background:var(--soft);border-left:4px solid var(--navy);border-radius:10px;padding:14px 16px;margin-bottom:22px}
+.steps{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 16px}
+.steps span{font-size:.75rem;padding:4px 10px;border-radius:99px;background:var(--soft);color:var(--mut);border:1px solid var(--line)}
+.steps span.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.card{border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 8px 22px -12px rgba(10,30,63,.3);margin-bottom:18px}
+.sit{background:var(--soft);border-radius:12px;padding:14px;margin:10px 0;font-size:.95rem}
+.sit b{color:var(--navy)}
+h2{color:var(--navy);font-size:1.2rem}
+h3{color:var(--red);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;margin-top:14px}
+.q{font-weight:700;margin:6px 0 10px}
+.opt{display:block;width:100%;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:11px 14px;margin:7px 0;font:inherit;color:inherit;cursor:pointer;transition:.15s}
+.opt:hover:not(:disabled){border-color:var(--navy);transform:translateX(3px)}
+.opt:disabled{cursor:default}
+.opt.ok{background:var(--okbg);border-color:var(--ok)}.opt.no{background:var(--nobg);border-color:var(--no)}
+.fb{display:none;border-radius:10px;padding:12px 14px;margin:8px 0;font-size:.92rem;animation:f .35s}
+.fb.show{display:block}.fb.ok{background:var(--okbg)}.fb.no{background:var(--nobg)}
+@keyframes f{from{opacity:0;transform:translateY(6px)}to{opacity:1}}
+.btn{background:linear-gradient(135deg,var(--navy),var(--red));color:#fff;border:0;border-radius:10px;padding:11px 20px;font:inherit;font-weight:700;cursor:pointer;margin-top:12px}
+.btn[hidden]{display:none}
+.solu{display:none;background:#fff;border:2px dashed var(--navy);border-radius:12px;padding:14px;margin-top:14px;animation:f .4s}
+.solu.show{display:block}
+.bar{height:10px;background:var(--soft);border-radius:9px;overflow:hidden;margin:4px 0 12px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--navy),var(--red));width:0;transition:width .8s}
+select{font:inherit;padding:8px;border:1.5px solid var(--line);border-radius:8px;width:100%;margin:4px 0 10px}label{font-weight:600;font-size:.9rem}.ck{display:flex;gap:10px;align-items:flex-start;padding:8px 0;cursor:pointer}.ck input{margin-top:5px;accent-color:var(--red)}.av{display:flex;align-items:center;gap:12px;margin-top:18px}.av img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid #fff;background:#fff}.av small{display:block;opacity:.85}.av b i{color:#4ade80;font-style:normal;font-size:.8rem;margin-left:6px}.tw{overflow-x:auto;margin:8px 0 14px}table{border-collapse:collapse;width:100%;min-width:720px;font-size:.78rem}th{background:var(--navy);color:#fff;text-align:left;padding:7px 8px;white-space:nowrap}td{padding:7px 8px;border-bottom:1px solid var(--line);white-space:nowrap}th.h,td.h{background:#fdeceb;color:var(--no);font-weight:700}th.h{background:var(--red);color:#fff}.st{color:var(--ok);font-weight:700}.hero{padding:34px 18px 0!important}.hero .in{max-width:900px;margin:0 auto;display:flex;align-items:flex-end;justify-content:space-between;gap:16px}.ht{padding-bottom:28px;flex:1}.hero-av{height:400px;flex-shrink:0;object-fit:contain;filter:drop-shadow(0 8px 18px rgba(0,0,0,.35))}
+.hero h1{background:linear-gradient(90deg,#fff 0%,#9bd8ff 28%,#ff7a88 58%,#fff 100%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:gl 7s linear infinite}
+@keyframes gl{to{background-position:220% center}}
+h2{background:linear-gradient(90deg,var(--navy),var(--red));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:inline-block}
+.cap{margin-top:14px;font-size:.9rem}.cap i{color:#4ade80;font-style:normal;font-size:.8rem}.cap small{opacity:.85}
+.fd{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}.fd.in{opacity:1;transform:none}
+.fx{position:fixed;right:10px;bottom:0;height:290px;z-index:5;pointer-events:none;opacity:0;transition:opacity .5s;display:none;filter:drop-shadow(0 6px 14px rgba(10,30,63,.3))}
+@media(min-width:1180px){.fx{display:block}}
+@media(max-width:600px){.hero-av{height:210px}.hero .in{align-items:flex-end}}
+.qr{text-align:center;background:linear-gradient(135deg,var(--soft),#fff);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:8px}.qr img{width:230px;border-radius:12px;margin-top:10px;box-shadow:0 8px 20px -8px rgba(10,30,63,.4)}
+
+.hxw{max-width:1040px;margin:0 auto;padding:22px 18px 0}
+.hx{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center;padding:46px 44px;border-radius:22px;border-top:4px solid #c1121f;color:#fff;background:radial-gradient(circle at 12% 8%,rgba(6,104,170,.45),transparent 42%),linear-gradient(135deg,#0a1e3f 0%,#0b2347 55%,#4a0d14 100%);box-shadow:0 22px 44px -18px rgba(10,30,63,.5)}
+.tg{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;opacity:.8;margin-bottom:12px}
+.hx h1{font-size:clamp(1.8rem,3.8vw,2.5rem);line-height:1.15;font-weight:800;margin:0 0 16px;background:none;-webkit-text-fill-color:#fff;color:#fff;animation:none}
+.gt{background:linear-gradient(90deg,#4a90e2,#d62839);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.sb{color:#cbd5e1;font-size:1.02rem;max-width:480px}.pl{margin-top:18px;font-size:.82rem;font-weight:700;color:#9bd8ff;letter-spacing:.03em}
+.hc{background:#fff;color:var(--txt);border-radius:18px;border-top:4px solid #c1121f;padding:18px 20px;box-shadow:0 14px 30px -12px rgba(0,0,0,.45)}
+.hh{display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.hh img{width:62px;height:62px;border-radius:50%;object-fit:cover;object-position:top;background:#fff;border:3px solid #2b6cb0;box-shadow:0 0 0 3px #fbd0d4}
+.dica{background:#f6f9ff;border-left:4px solid #c1121f;border-radius:10px;padding:12px 14px;font-size:.88rem;margin-bottom:12px;animation:f .6s both}.dica b{color:#c1121f;font-size:.8rem;margin-right:4px}
+.stp{border:1px solid var(--line);border-left:4px solid #0284c7;border-radius:10px;padding:10px 14px;margin-top:9px;font-weight:700;font-size:.85rem;color:#334155;animation:f .6s both}.stp.r{border-left-color:#c1121f;background:linear-gradient(90deg,#fff,#fdeceb)}
+.stp:nth-of-type(1){animation-delay:.15s}.stp:nth-of-type(2){animation-delay:.3s}.stp:nth-of-type(3){animation-delay:.45s}.stp:nth-of-type(4){animation-delay:.6s}
+.kpis{margin:22px 0}
+@media(max-width:760px){.hx{grid-template-columns:1fr;padding:30px 22px}}
+.sec{margin-top:34px}.fin{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;border:1px solid var(--line);border-radius:18px;padding:30px;background:#fff;box-shadow:0 10px 26px -14px rgba(10,30,63,.3);margin-top:14px}.fl,.fr{text-align:center}
+.qbox{display:inline-block;padding:10px;border:1px solid var(--line);border-radius:16px;background:#fff;margin:14px 0 8px}.qbox img{width:170px;display:block;border-radius:6px}
+.fav{width:150px;height:150px;border-radius:50%;margin:0 auto 12px;border:3px solid #bcd0ff;box-shadow:0 10px 30px -6px rgba(66,110,255,.35);background:radial-gradient(#fff,#eef3fb);overflow:hidden;display:flex;align-items:flex-end;justify-content:center}.fav img{height:112%;object-fit:contain;margin-bottom:-4px}
+@media(max-width:700px){.fin{grid-template-columns:1fr;padding:22px}}
+.lg{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.chip{font:inherit;font-size:.78rem;font-weight:600;border:1.5px solid var(--line);background:#fff;border-radius:99px;padding:6px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;color:var(--txt)}.chip i{width:10px;height:10px;border-radius:50%;display:inline-block}.chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.fw{border:1px solid var(--line);border-radius:18px;padding:22px;background:#fff;box-shadow:0 10px 26px -14px rgba(10,30,63,.3)}.nd{border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff;font-size:.82rem;text-align:center;max-width:430px;margin:0 auto;transition:opacity .35s,box-shadow .35s}.nd b{display:block;color:var(--navy);font-size:.85rem}.nd small{color:var(--mut);display:block;margin-top:2px}.nd.dc{background:var(--soft);border-color:var(--navy)}
+.nd.p1{border-left:5px solid #16794a}.nd.p2{border-left:5px solid #d97706}.nd.p3{border-left:5px solid #0284c7}.nd.p4{border-left:5px solid #c1121f}.ar{text-align:center;color:var(--red);font-weight:800;line-height:1.3}.nd.dim,.lab.dim,.ar.dim{opacity:.22}
+.br,.br2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}.br2{gap:10px}.col{display:flex;flex-direction:column;gap:6px;min-width:0}.col .nd{width:100%}.lab{font-size:.72rem;font-weight:800;text-align:center;text-transform:uppercase;letter-spacing:.03em;transition:opacity .35s}.lab.no{color:var(--no)}.lab.yes{color:var(--ok)}
+.br2.st1{grid-template-columns:1fr}@media(max-width:700px){.br,.br2{grid-template-columns:1fr}}
+footer{text-align:center;color:var(--mut);font-size:.82rem;padding:20px}
+@media(max-width:600px){.kpis{grid-template-columns:1fr}}
+
+.ev{max-width:900px;margin:10px auto 34px;padding:0 18px}
+.ev-in{display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;padding:38px 40px;border-radius:22px;color:#fff;background:radial-gradient(circle at 10% 0%,rgba(74,144,226,.28),transparent 45%),linear-gradient(135deg,#0a1e3f 0%,#0b2347 60%,#3a0d16 100%);border:1px solid rgba(255,255,255,.1);box-shadow:0 22px 44px -18px rgba(10,30,63,.55)}
+.ev-t{min-width:0}
+.ev h2.ev-h{font-size:clamp(1.6rem,4vw,2.1rem);line-height:1.15;font-weight:800;margin:0 0 12px;background:none;-webkit-text-fill-color:#fff;color:#fff;display:block}
+.ev-h span{background:linear-gradient(90deg,#4a90e2,#ff5b6b);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.ev-t>p{color:#cbd5e1;font-size:.98rem;max-width:520px}
+.ev-s{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-direction:column;gap:12px}
+.ev-s li{display:flex;align-items:center;gap:12px;color:#dbe3ee;font-size:.92rem}
+.ev-s i{flex:0 0 auto;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-weight:700;font-size:.78rem;background:#d62839;color:#fff;box-shadow:0 0 0 3px rgba(214,40,57,.25)}
+.ev-q{background:#fff;border-radius:16px;padding:14px 14px 12px;text-align:center;box-shadow:0 14px 30px -12px rgba(0,0,0,.6)}
+.ev-q img{display:block;width:210px;max-width:100%;border-radius:10px}
+.ev-q small{display:block;margin-top:10px;color:#14213d;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.7rem;font-weight:700;letter-spacing:.14em}
+@media(max-width:700px){.ev-in{grid-template-columns:1fr;padding:28px 22px;gap:24px;justify-items:stretch}.ev-q{justify-self:center}}
+</style>
+</head>
+<body>
+<div class="hxw"><div class="hx">
+<div class="hl"><div class="tg">Aprenda para Ensinar · Trainee - Márcia Cardoso · Ateky Internet</div>
+<h1>Quem <span class="gt">consulta o histórico</span><br>abre o processo certo</h1>
+<p class="sb">Cada abertura é uma chance de acertar o processo ou de gerar retrabalho. Prazo, assunto e diagnóstico mudam o resultado. Aqui você aprende a pensar, não a decorar.</p>
+<div class="pl">Conhecimento → Raciocínio → Autonomia → Resultado</div></div>
+<div class="hc"><div class="hh"><b>Trainee - Márcia Cardoso</b><img src="assets/avatar-marcia.png" alt="Márcia"></div>
+<div class="dica"><b>DICA DE OURO</b> "Para o cliente, qualquer retorno é um problema contínuo. Siga sempre o processo correto."</div>
+<div class="stp">Consultar o histórico (60 dias)</div><div class="stp">Conferir assunto e diagnóstico</div><div class="stp">Informar o colaborador anterior</div><div class="stp r">2ª reincidência vai direto ao N3</div></div>
+</div></div>
+<img class="fx" id="fx" src="assets/avatar-marcia.png" alt="">
+<div class="wrap">
+<div class="kpis"><div class="kpi"><b>60 dias</b><small>janela de reincidência, mesmo assunto</small></div><div class="kpi"><b>Colaborador anterior</b><small>registro obrigatório de quem finalizou</small></div><div class="kpi"><b>2ª → N3</b><small>escalonamento direto</small></div></div>
+<div class="intro"><b>Como funciona:</b> cada caso tem 6 etapas. Você lê a <b>situação</b>, é <b>provocado a pensar</b>, <b>investiga</b>, <b>constrói a solução</b>, <b>aplica em outro cenário</b> e é <b>avaliado</b>. Errar faz parte: cada resposta, certa ou errada, vem com o motivo.</div>
+<div class="card"><h2>Calculadora de abertura</h2><p style="color:var(--mut);font-size:.9rem">Teste as condições de um chamado e veja a classificação. Use depois dos casos, para conferir o seu raciocínio.</p>
+<div id="calc"></div><div class="sit" id="res"></div><button class="btn" id="cp">Copiar texto para o chamado</button></div>
+<div class="card"><h2>Como aparece no sistema</h2><p style="color:var(--mut);font-size:.9rem">Atalho de diagnóstico do histórico. As colunas em vermelho são as que decidem o processo: <b>Diagnóstico</b> (define se há reincidência) e <b>Colaborador</b> (quem informar ao abrir Suporte Reincidência). Observe os três atendimentos antes de resolver os casos.</p><h3>1.º atendimento · 14/05 · Lenta/Caindo</h3><div class="tw"><table><tr><th>Cliente</th><th>Assunto</th><th class="h">Diagnóstico</th><th>Abertura</th><th>Fechamento</th><th>Status</th><th>Prioridade</th><th>Tipo</th><th class="h">Colaborador</th></tr><tr><td>TREINAMENTO…</td><td>LENTA / CAINDO</td><td class="h">HELPDESK — IPTV</td><td>14/05/2026…</td><td>14/05/2026 15…</td><td class="st">● Solucionado</td><td>Normal</td><td>Interna</td><td class="h">MARCIA CARDOSO BARATA</td></tr></table></div><h3>2.º atendimento · dentro de 60 dias · Suporte Reincidência (fechado em 20/05)</h3><div class="tw"><table><tr><th>Cliente</th><th>Assunto</th><th class="h">Diagnóstico</th><th>Abertura</th><th>Fechamento</th><th>Status</th><th>Prioridade</th><th>Tipo</th><th class="h">Colaborador</th></tr><tr><td>TREINAMENTO…</td><td>SUPORTE REINCIDENCIA</td><td class="h">HELPDESK — SEM CONTATO</td><td>14/05/2026…</td><td>14/05/2026 15…</td><td class="st">● Solucionado</td><td>Normal</td><td>Interna</td><td class="h">MARCIA CARDOSO BARATA</td></tr></table></div><h3>3.º atendimento · 25/05 · novo ciclo (Lenta/Caindo normal)</h3><div class="tw"><table><tr><th>Cliente</th><th>Assunto</th><th class="h">Diagnóstico</th><th>Abertura</th><th>Fechamento</th><th>Status</th><th>Prioridade</th><th>Tipo</th><th class="h">Colaborador</th></tr><tr><td>TREINAMENTO…</td><td>LENTA / CAINDO</td><td class="h">HELPDESK — IPTV</td><td>14/05/2026…</td><td>14/05/2026 15…</td><td class="st">● Solucionado</td><td>Normal</td><td>Interna</td><td class="h">MARCIA CARDOSO BARATA</td></tr></table></div></div>
+<div class="sec" id="fluxo"><h2>Fluxo de decisão: que processo abrir</h2><p style="color:var(--mut);margin-top:4px">Escolha um caminho para ver o trajeto destacado. Depois, resolva os casos e confira o seu raciocínio aqui.</p><div class="lg"><button class="chip on" data-f="all">Todos</button><button class="chip" data-f="1"><i style="background:#16794a"></i>Caminho 1: fora dos 60 dias / assunto novo</button><button class="chip" data-f="2"><i style="background:#d97706"></i>Caminho 2: exceção</button><button class="chip" data-f="3"><i style="background:#0284c7"></i>Caminho 3: 1.ª reincidência válida</button><button class="chip" data-f="4"><i style="background:#c1121f"></i>Caminho 4: 2.ª reincidência → N3</button></div><div class="fw"><div class="nd " data-p="1234"><b>Cliente entra em contato com problema de conexão ou lentidão</b><small>Início do atendimento no helpdesk</small></div><div class="ar">↓</div><div class="nd " data-p="1234"><b>Consultar histórico de atendimentos</b><small>Obrigatório consultar o histórico no sistema</small></div><div class="ar">↓</div><div class="nd dc" data-p="1234"><b>Existe atendimento anterior pelo mesmo assunto nos últimos 60 dias?</b><small>Verificação de prazo e concordância de assunto</small></div><div class="br"><div class="col"><div class="lab no">NÃO → assunto novo ou fora dos 60 dias</div><div class="nd p1" data-p="1"><b>Abrir processo conforme o assunto</b><small>ex.: Lenta/Caindo, Sem Conexão<br>✓ Segue fluxo padrão N1</small></div></div><div class="col"><div class="lab yes">SIM → dentro do prazo</div><div class="nd dc" data-p="234"><b>Último diagnóstico foi "Sem Contato", "Duplicado" ou "Recusou o Atendimento Interno"?</b></div><div class="br2"><div class="col"><div class="lab no">SIM (exceção)</div><div class="nd p2" data-p="2"><b>Abre novo processo normal</b><small>Não registra como reincidência</small></div></div><div class="col"><div class="lab yes">NÃO (efetivo)</div><div class="nd " data-p="34"><b>Abre Suporte Reincidência</b><small>Com o nome do colaborador anterior</small></div><div class="ar">↓</div><div class="nd dc" data-p="34"><b>É a 2.ª reincidência?</b></div><div class="br2 st1"><div class="col"><div class="lab no">NÃO</div><div class="nd p3" data-p="3"><b>1.ª reincidência válida</b><small>Segue como Suporte Reincidência</small></div></div><div class="col"><div class="lab yes">SIM</div><div class="nd p4" data-p="4"><b>Encaminhar direto ao N3</b><small>Resolução imediata</small></div></div></div></div></div></div></div></div></div>
+<div class="steps" id="steps"></div>
+<div id="app"></div>
+</div>
+<section class="ev" id="avaliacao"><div class="ev-in"><div class="ev-t"><h2 class="ev-h">Avalie o <span>Treinamento</span></h2><p>Sua opinião é fundamental para aprimorar nossos processos e treinamentos operacionais. Aponte a câmera do seu smartphone para o QR Code ao lado para responder à rápida avaliação.</p><ol class="ev-s"><li><i>1</i>Abra a câmera do seu celular ou leitor de QR Code</li><li><i>2</i>Aponte para o código ao lado</li><li><i>3</i>Envie sua nota e feedback sobre o treinamento</li></ol></div><div class="ev-q"><img src="assets/qrcode-avaliacao.jpg" alt="QR Code para avaliar o treinamento"><small>ESCANEAR PARA AVALIAR</small></div></div></section>
+<footer>Aprenda para Ensinar · Não entregue respostas. Desenvolva raciocínio.</footer>
+<script>
+const SK={rac:'Raciocínio crítico',dia:'Diagnóstico',com:'Comunicação',dec:'Tomada de decisão'};
+const CASES=[
+{t:'Caso 1 — O cliente volta',sit:'<b>14/05:</b> cliente contata por lentidão. Atendimento aberto como <b>Lenta/Caindo</b> e finalizado com diagnóstico <b>HELPDESK — IPTV</b> (atendimento efetivo). Agora o cliente liga de novo, <b>com o mesmo problema</b>, dentro do prazo.',
+steps:[
+{k:'rac',q:'Antes de abrir qualquer processo, o que é obrigatório fazer?',o:[['Abrir um Lenta/Caindo novo, porque o cliente relatou o mesmo sintoma.','Sem consultar o histórico você não sabe se é assunto novo ou repetição, e isso gera erro de classificação e retrabalho.'],['Consultar o Histórico de Atendimentos e verificar prazo (60 dias) e assunto.','O histórico é obrigatório antes de abrir qualquer processo. Prazo e assunto, juntos, decidem se há reincidência.',1],['Perguntar ao cliente se ele já ligou antes.','O cliente pode não lembrar ou perceber diferente. A fonte confiável é o sistema.']]},
+{k:'dec',q:'Efetivo, mesmo assunto, dentro de 60 dias. Qual processo abrir?',o:[['Lenta/Caindo normal.','Isso só vale se for assunto novo, fora dos 60 dias ou se a exceção se aplicar. Aqui nenhuma se aplica.'],['Suporte Reincidência.','Segundo contato, mesmo assunto, dentro de 60 dias, com diagnóstico efetivo: é reincidência.',1],['Encaminhar direto ao N3.','O N3 direto é para a 2.ª reincidência. Esta é a primeira.']]},
+{k:'dia',q:'No campo "nome do colaborador responsável", quem deve ser informado?',o:[['Eu mesmo, que estou abrindo o atendimento.','O campo identifica quem fez o atendimento anterior, não quem abre o novo.'],['Quem finalizou o atendimento anterior sobre o mesmo assunto.','Esse nome aparece na coluna Colaborador do atalho de atendimentos. Nunca deixe o campo em branco.',1],['Pode ficar em branco se eu não achar.','O campo é obrigatório. Omitir gera erro de classificação e retrabalho.']]}],
+solu:'<b>Solução construída:</b> histórico → prazo ≤ 60 dias → mesmo assunto → diagnóstico efetivo → abrir <b>Suporte Reincidência</b> informando o colaborador que finalizou o atendimento anterior.'},
+{t:'Caso 2 — O "Sem Contato" muda o ciclo',sit:'O 2.º atendimento foi aberto como Suporte Reincidência e fechado com diagnóstico <b>HELPDESK — SEM CONTATO</b> em 20/05. Em <b>25/05</b>, o cliente liga outra vez, mesmo assunto.',
+steps:[
+{k:'rac',q:'Este novo contato é a 2.ª reincidência?',o:[['Sim: já houve um Suporte Reincidência.','Olhe o diagnóstico: "Sem Contato" não conta como atendimento efetivado.'],['Não: o anterior foi "Sem Contato", então não é reincidência.','O fechamento com "Sem Contato" é exceção. O próximo contato recomeça o ciclo.',1],['Depende da opinião do cliente.','Reincidência é critério objetivo, definido pelo diagnóstico do atendimento anterior.']]},
+{k:'dia',q:'Quais diagnósticos anteriores NÃO geram reincidência?',o:[['Sem Contato, Duplicado e Recusou o Atendimento Interno.','Nesses casos abre-se novo processo conforme o assunto, sem registrar como reincidência.',1],['IPTV, Sem Contato e Duplicado.','IPTV é diagnóstico efetivo, e nele há reincidência.'],['Só "Sem Contato".','Há três exceções, não uma.']]},
+{k:'dec',q:'O que você abre agora?',o:[['Suporte Reincidência.','Seguiria uma regra que não se aplica ao caso.'],['Um Lenta/Caindo normal, avaliando se encaminha ao N3.','Segue o fluxo normal e o ciclo recomeça.',1]]}],
+solu:'<b>Solução construída:</b> o diagnóstico anterior é o que define. Sem Contato, Duplicado ou Recusou o Atendimento Interno → novo processo normal.'},
+{t:'Caso 3 — Segunda vez e ameaça de cancelar',sit:'O cliente já teve um Suporte Reincidência efetivo. Agora liga de novo, <b>mesmo assunto, antes de 60 dias</b>, e diz que vai cancelar o plano.',
+steps:[
+{k:'dec',q:'Qual é o encaminhamento correto?',o:[['Abrir Suporte Reincidência e encaminhar direto ao N3.','É a 2.ª reincidência: vai direto ao N3. Com ameaça de cancelamento, o N3 monitora.',1],['Abrir Suporte Reincidência e deixar na fila do N1.','Se já houve uma reincidência, a segunda exige o N3.'],['Registrar como Lenta/Caindo normal.','Nenhuma exceção se aplica. É reincidência.']]},
+{k:'com',q:'Como deve ser a sua postura na conversa?',o:[['Explicar o procedimento interno para o cliente entender.','O cliente não quer o processo, quer a solução.'],['Reconhecer que ele voltou, tratar como problema contínuo e seguir o processo correto.','Para o cliente, qualquer retorno é um problema contínuo. Acolher e acertar o processo é a melhor experiência possível.',1]]}],
+solu:'<b>Solução construída:</b> 2.ª reincidência, ou retorno em até 60 dias com ameaça de cancelamento = Suporte Reincidência + N3 (monitorar), com acolhimento.'},
+{t:'Caso 4 — Encontre os erros',sit:'<b>Relato de abertura:</b> o colaborador abriu "Lenta/Caindo" sem olhar o histórico. Havia atendimento de 20 dias, mesmo assunto, finalizado com IPTV. Ao perceber, abriu Suporte Reincidência e deixou o campo do colaborador responsável <b>em branco</b>.',
+steps:[
+{k:'rac',q:'Qual foi o erro que originou os outros?',o:[['Deixar o campo em branco.','É um erro, mas veio depois. Procure o primeiro.'],['Não consultar o histórico antes de abrir.','O erro raiz. A consulta é obrigatória e teria evitado a reabertura.',1],['Escolher o assunto Lenta/Caindo.','O assunto estava certo. O problema foi abrir sem ler o histórico.']]},
+{k:'dia',q:'O colaborador que finalizou o atendimento anterior foi desligado da empresa. O que informar?',o:[['O nome do líder imediato responsável no período em que ele atuava.','Quando o colaborador não está mais ativo, registra-se o líder imediato daquele período.',1],['Deixar em branco, porque a pessoa não existe mais.','O campo é obrigatório sempre.'],['O nome do primeiro colaborador que aparecer.','Aleatório gera erro de classificação.']]}],
+solu:'<b>Solução construída:</b> histórico primeiro, depois a classificação. O campo do colaborador é obrigatório; se ele foi desligado, informar o líder imediato do período.'}
+];
+
+const F=[['Prazo desde o último atendimento',['Até 60 dias','Mais de 60 dias']],['Assunto relatado pelo cliente',['Mesmo assunto','Assunto diferente']],['Diagnóstico do atendimento anterior',['Efetivo (ex.: IPTV)','Exceção (Sem Contato, Duplicado, Recusou)']],['Reincidências no histórico',['1ª reincidência','2ª reincidência']]];
+document.getElementById('calc').innerHTML=F.map((f,i)=>`<label>${i+1}. ${f[0]}</label><select id="c${i}">${f[1].map((o,j)=>`<option value="${j}">${o}</option>`).join('')}</select>`).join('');
+let T='';
+function calc(){const v=F.map((_,i)=>+document.getElementById('c'+i).value);let t,d;
+if(v[0]||v[1]){t='Abrir processo conforme o assunto';d='Fora dos 60 dias ou assunto diferente: não é reincidência. Segue o fluxo padrão N1 (ex.: Lenta/Caindo, Sem Conexão).';T='Assunto novo ou fora de 60 dias. Aberto conforme o assunto, fluxo padrão N1.'}
+else if(v[2]){t='Abrir novo processo normal (exceção)';d='O diagnóstico anterior não gera reincidência. Abra conforme o assunto e não registre como reincidência.';T='Atendimento anterior encerrado como exceção (Sem Contato/Duplicado/Recusou). Novo processo normal.'}
+else if(v[3]){t='Suporte Reincidência → encaminhar direto ao N3';d='2.ª reincidência: informe o colaborador que finalizou o atendimento anterior e encaminhe direto ao N3.';T='SUPORTE REINCIDÊNCIA (2ª). Colaborador responsável: [NOME de quem finalizou o atendimento anterior]. Encaminhar ao N3.'}
+else{t='Abrir "Suporte Reincidência"';d='1.ª reincidência válida: informe o colaborador que finalizou o atendimento anterior (obrigatório).';T='SUPORTE REINCIDÊNCIA (1ª). Colaborador responsável: [NOME de quem finalizou o atendimento anterior].'}
+document.getElementById('res').innerHTML='<b>'+t+'</b><br>'+d+'<br><small style="color:var(--mut)">'+T+'</small>'}
+F.forEach((_,i)=>document.getElementById('c'+i).onchange=calc);calc();
+document.getElementById('cp').onclick=e=>{try{navigator.clipboard.writeText(T);e.target.textContent='Copiado ✓'}catch(x){e.target.textContent='Copie manualmente'}};
+const CK=['Consultei o histórico de atendimentos?','Verifiquei o diagnóstico do atendimento anterior? (Sem Contato, Duplicado ou Recusou: não é reincidência)','Identifiquei o colaborador responsável pelo atendimento anterior?','É a 2ª reincidência? Se sim, N3 direto.','O assunto é diferente? Então abro conforme o novo assunto, mesmo que seja "Monitorar".'];
+function pg(){const n=document.querySelectorAll('.ck input:checked').length;document.getElementById('pg').style.width=(n*20)+'%';document.getElementById('pt').textContent=n+'/5'}
+const app=document.getElementById('app'),stepsEl=document.getElementById('steps');
+const score={};Object.keys(SK).forEach(k=>score[k]={a:0,t:0});
+let ci=0,si=0;
+function renderSteps(p){const n=['Situação','Pensar','Investigar','Solução','Outro cenário','Avaliação'];stepsEl.innerHTML=n.map((x,i)=>`<span class="${i===p?'on':''}">${i+1}. ${x}</span>`).join('')}
+function show(){
+if(ci>=CASES.length)return final();
+const c=CASES[ci];renderSteps(ci>0?4:0);
+app.innerHTML=`<div class="card"><h2>${c.t}</h2><h3>Situação</h3><div class="sit">${c.sit}</div><div id="qa"></div><div class="solu" id="solu">${c.solu}</div><button class="btn" id="next" hidden></button></div>`;
+si=0;ask();
+}
+function ask(){
+renderSteps(ci>0?4:Math.min(2,1+(si>0?1:0)));const c=CASES[ci],s=c.steps[si],qa=document.getElementById('qa');
+qa.innerHTML=`<h3>${si===0?'Provoque o pensamento':'Investigue e decida'} · ${SK[s.k]}</h3><div class="q">${s.q}</div>`+s.o.map((o,i)=>`<button class="opt" data-i="${i}">${o[0]}</button>`).join('')+'<div class="fb" id="fb"></div>';
+qa.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
+const i=+b.dataset.i,o=s.o[i],ok=!!o[2];
+qa.querySelectorAll('.opt').forEach((x,j)=>{x.disabled=true;if(s.o[j][2])x.classList.add('ok')});
+if(!ok)b.classList.add('no');
+score[s.k].t++;if(ok)score[s.k].a++;
+const fb=document.getElementById('fb');fb.className='fb show '+(ok?'ok':'no');
+fb.innerHTML=(ok?'<b>Isso mesmo.</b> ':'<b>Ainda não.</b> ')+o[1]+(ok?'':'<br><br><b>Resposta mais coerente:</b> '+s.o.find(x=>x[2])[1]);
+const n=document.getElementById('next');n.hidden=false;
+const last=si===c.steps.length-1;
+n.textContent=last?'Ver a solução construída':'Próxima pergunta';
+n.onclick=()=>{if(!last){si++;n.hidden=true;ask()}else{document.getElementById('solu').classList.add('show');renderSteps(ci>0?4:3);n.textContent=ci===CASES.length-1?'Ver minha avaliação':'Aplicar em outro cenário →';n.onclick=()=>{ci++;show();scrollTo({top:0,behavior:'smooth'})}}};
+});
+}
+function final(){
+renderSteps(5);
+let tot=0,ac=0;const rows=Object.keys(SK).map(k=>{const s=score[k];tot+=s.t;ac+=s.a;const p=s.t?Math.round(100*s.a/s.t):0;return `<div><b>${SK[k]}</b> · ${p}%<div class="bar"><i style="width:${p}%"></i></div></div>`}).join('');
+const P=Math.round(100*ac/tot);
+app.innerHTML=`<div class="card"><h2>Sua avaliação de competências</h2><p>Você acertou <b>${ac} de ${tot}</b> (${P}%). Esta nota mede como você pensou, não o que decorou.</p><br>${rows}
+<div class="sit"><b>Reflita:</b> em qual caso você mais hesitou? Que informação do histórico mudaria o seu processo? Se um cenário novo aparecer amanhã, quais perguntas você faria a si mesmo antes de agir?</div>
+<h3>Checklist antes de abrir</h3><div class="sit">${CK.map(c=>`<label class="ck"><input type="checkbox" onchange="pg()"><span>${c}</span></label>`).join('')}<div class="bar"><i id="pg"></i></div><small id="pt">0/5</small></div>
+<h3>Observações importantes</h3><div class="sit">• Colaborador desligado: registrar o líder imediato do período.<br>• Atendimento de Informações Técnicas em aberto: finalizar e abrir "Monitorar".<br>• Atendimento preventivo em andamento: continuar com o mesmo atendimento.<br>• Retorno em 60 dias com ameaça de cancelar: Suporte Reincidência + N3 (monitorar).<br>• Assuntos a avaliar: Lenta/Caindo, NPS, Sem conexão, Suporte Reincidência, Verificação de Linha, Monitorar possível cancelamento.</div>
+<button class="btn" onclick="location.reload()">Refazer o treinamento</button>
+</div>`;
+}
+show();
+document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{const f=b.dataset.f;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===b));document.querySelectorAll('.fw .nd').forEach(n=>n.classList.toggle('dim',f!=='all'&&!n.dataset.p.includes(f)));document.querySelectorAll('.fw .lab').forEach(l=>{const p=l.nextElementSibling;l.classList.toggle('dim',f!=='all'&&p&&p.dataset&&p.dataset.p&&!p.dataset.p.includes(f))})});
+
+const io=window.IntersectionObserver?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08}):null;
+function fade(){if(!io)return;document.querySelectorAll('.card,.kpi,.intro,.sit,.fin,.fw').forEach(el=>{if(!el.classList.contains('fd')){el.classList.add('fd');io.observe(el)}})}
+fade();new MutationObserver(fade).observe(document.body,{childList:true,subtree:true});
+addEventListener('scroll',()=>{document.getElementById('fx').style.opacity=scrollY>320?1:0},{passive:true});
+</script>
+</body>
+</html>
