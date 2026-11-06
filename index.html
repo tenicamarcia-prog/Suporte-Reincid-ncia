@@ -88,8 +88,8 @@ footer{text-align:center;color:var(--mut);font-size:.82rem;padding:20px}
 .ev-s{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-direction:column;gap:12px}
 .ev-s li{display:flex;align-items:center;gap:12px;color:#dbe3ee;font-size:.92rem}
 .ev-s i{flex:0 0 auto;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-weight:700;font-size:.78rem;background:#d62839;color:#fff;box-shadow:0 0 0 3px rgba(214,40,57,.25)}
-.ev-q{background:#fff;border-radius:16px;padding:14px 14px 12px;text-align:center;box-shadow:0 14px 30px -12px rgba(0,0,0,.6)}
-.ev-q img{display:block;width:210px;max-width:100%;border-radius:10px}
+.ev-q{background:#fff;border-radius:16px;padding:14px 14px 12px;display:flex;align-items:center;gap:10px;justify-content:center;box-shadow:0 14px 30px -12px rgba(0,0,0,.6)}
+.ev-q .av{width:64px;height:64px;border-radius:50%;object-fit:cover;margin-left:10px}
 .ev-q small{display:block;margin-top:10px;color:#14213d;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.7rem;font-weight:700;letter-spacing:.14em}
 @media(max-width:700px){.ev-in{grid-template-columns:1fr;padding:28px 22px;gap:24px;justify-items:stretch}.ev-q{justify-self:center}}
 </style>
@@ -115,7 +115,7 @@ footer{text-align:center;color:var(--mut);font-size:.82rem;padding:20px}
 <div class="steps" id="steps"></div>
 <div id="app"></div>
 </div>
-<section class="ev" id="avaliacao"><div class="ev-in"><div class="ev-t"><h2 class="ev-h">Avalie o <span>Treinamento</span></h2><p>Sua opinião é fundamental para aprimorar nossos processos e treinamentos operacionais. Aponte a câmera do seu smartphone para o QR Code ao lado para responder à rápida avaliação.</p><ol class="ev-s"><li><i>1</i>Abra a câmera do seu celular ou leitor de QR Code</li><li><i>2</i>Aponte para o código ao lado</li><li><i>3</i>Envie sua nota e feedback sobre o treinamento</li></ol></div><div class="ev-q"><img src="assets/qrcode-avaliacao.jpg" alt="QR Code para avaliar o treinamento"><small>ESCANEAR PARA AVALIAR – fonte: formulário interno</small>
+<div class="ev-in"><div class="ev-t"><h2 class="ev-h">Avalie o <span>Treinamento</span></h2><p>Sua opinião é fundamental para aprimorar nossos processos e treinamentos operacionais. Aponte a câmera do seu smartphone para o QR Code ao lado para responder à rápida avaliação.</p><ol class="ev-s"><li><i>1</i>Abra a câmera do seu celular ou leitor de QR Code</li><li><i>2</i>Aponte para o código ao lado</li><li><i>3</i>Envie sua nota e feedback sobre o treinamento</li></ol></div><div class="ev-q"><img src="assets/qrcode-avaliacao.jpg" alt="QR Code para avaliar o treinamento"><img src="assets/avatar-user.jpg" alt="Avatar" class="av"></div>
 </div></div></section>
 <footer>Aprenda para Ensinar · Não entregue respostas. Desenvolva raciocínio.</footer>
 <script>
